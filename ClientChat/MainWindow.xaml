@@ -1,0 +1,23 @@
+﻿<Window x:Class="ClientChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientChat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closed">
+    <Grid RenderTransformOrigin="0.402,0.497">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="550*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="UserName"  HorizontalAlignment="Left" Height="53" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="217" Margin="10,75,0,0" Grid.ColumnSpan="2"/>
+        <Button Click="Button_Click" x:Name="Connecter" Content="Connect" HorizontalAlignment="Left" Height="44" Margin="10,10,0,0" VerticalAlignment="Top" Width="217" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="Chat" HorizontalAlignment="Left" Height="394" Margin="173,0,0,0" VerticalAlignment="Center" Width="530" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="Message" HorizontalAlignment="Left" Height="166" Margin="10,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="217" Grid.ColumnSpan="2" KeyDown="Texting" MaxLength="50"/>
+        <Button x:Name="ClearChatButton" Content="Clear Chat History" Click="ClearChatButton_Click" HorizontalAlignment="Left" Margin="44,337,0,38" Width="150" Grid.ColumnSpan="2" RenderTransformOrigin="0.497,1.313" />
+
+    </Grid>
+
+</Window>
